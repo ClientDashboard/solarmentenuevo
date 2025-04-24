@@ -1,0 +1,43 @@
+/* Typing animation */
+.typing-container {
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.typing-container .line {
+  position: relative;
+  margin-bottom: 0.25rem;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  animation: typingLine 0.05s linear forwards;
+}
+
+@keyframes typingLine {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Cursor animation */
+.typing-container .line:last-child::after {
+  content: '|';
+  position: absolute;
+  right: -4px;
+  animation: cursor 1s infinite;
+}
+
+@keyframes cursor {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
