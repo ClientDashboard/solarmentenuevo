@@ -210,52 +210,8 @@ export default function Home() {
   }
 
   return (
-    <div ref={mainRef} className="overflow-x-hidden bg-white text-gray-800">
-      <style jsx global>{`
-       /* Typing animation */
-       .typing-container {
-         display: block;
-         font-family: monospace;
-         white-space: nowrap;
-         overflow: hidden;
-       }
-
-       .typing-container .line {
-         position: relative;
-         margin-bottom: 0.25rem;
-         overflow: hidden;
-         white-space: nowrap;
-         opacity: 0;
-         animation: typingLine 0.05s linear forwards;
-       }
-
-       @keyframes typingLine {
-         0% {
-           opacity: 0;
-         }
-         100% {
-           opacity: 1;
-         }
-       }
-
-       /* Cursor animation */
-       .typing-container .line:last-child::after {
-         content: '|';
-         position: absolute;
-         right: -4px;
-         animation: cursor 1s infinite;
-       }
-
-       @keyframes cursor {
-         0%,
-         100% {
-           opacity: 1;
-         }
-         50% {
-           opacity: 0;
-         }
-       }
-     `}</style>
+  <div ref={mainRef} className="overflow-x-hidden bg-white text-gray-800">
+    
       {/* Navbar fijo */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
         <div className="container mx-auto px-4">
