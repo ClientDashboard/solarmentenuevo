@@ -209,7 +209,7 @@ export default function Home() {
   }
 
   return (
-    <div ref={mainRef} className="overflow-x-hidden bg-white text-gray-800 font-[Mulish,sans-serif]">
+    <div ref={mainRef} className="overflow-x-hidden bg-white text-gray-800 font-sans">
       <style jsx global>{`
        /* Typing animation */
        .typing-container {
