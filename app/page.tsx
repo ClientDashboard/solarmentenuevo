@@ -6,7 +6,6 @@ import { useRouter } from "next/navigation"
 import { Zap, Shield, ArrowRight, ChevronDown, Sun, Sparkles, LineChart } from "lucide-react"
 import SavingsShowcase from "@/components/savings-showcase"
 import TypingAnimation from "@/components/typing-animation"
-import "./globals.css"
 
 export default function Home() {
   const router = useRouter()
