@@ -1,16 +1,14 @@
 // Add a new API route to test the Supabase connection
-
 import { NextResponse } from "next/server"
 import { testSupabaseConnection } from "@/lib/supabase"
 import { supabaseAdmin } from "@/lib/supabaseAdmin"
 
-export const dynamic = "force_dynamic"
+export const dynamic = "force-dynamic"
 
 export async function GET() {
   try {
     // First test the basic connection
     const { success, error } = await testSupabaseConnection()
-
     if (!success) {
       return NextResponse.json(
         {
@@ -21,15 +19,12 @@ export async function GET() {
         { status: 500 },
       )
     }
-
     // Now test table access
     const tables = ["clientes", "cotizaciones"]
     const tableResults = {}
-
     for (const table of tables) {
       try {
         const { data, error: tableError } = await supabaseAdmin.from(table).select("count").limit(1)
-
         tableResults[table] = {
           success: !tableError,
           error: tableError ? tableError.message : null,
@@ -41,7 +36,6 @@ export async function GET() {
         }
       }
     }
-
     return NextResponse.json({
       success: true,
       message: "Successfully connected to Supabase",
