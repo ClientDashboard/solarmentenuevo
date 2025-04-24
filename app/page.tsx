@@ -208,22 +208,24 @@ export default function Home() {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
   }
 
-  return (
+ return (
   <div ref={mainRef} className="overflow-x-hidden bg-white text-gray-800">
-    
-      {/* Navbar fijo */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="relative h-8 w-8">
-                <Sun className="h-8 w-8 text-orange-500" />
-              </div>
-              <span className="font-bold text-xl">
-                Solar<span className="text-orange-500">Mente</span>
-                <span className="text-orange-500 font-light">.AI</span>
-              </span>
-            </Link>
+    {/* Navbar fijo */}
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          <Link href="/" className="flex items-center gap-2">
+            <div className="relative h-8 w-8">
+              <Sun className="h-8 w-8 text-orange-500" />
+            </div>
+            <span className="font-bold text-xl">
+              Solar<span className="text-orange-500">Mente</span>
+              <span className="text-orange-500 font-light">.AI</span>
+            </span>
+          </Link>
+        </div>
+      </div>
+    </header>
 
             <nav className="hidden md:flex items-center space-x-8">
               <Link href="/#beneficios" className="text-gray-600 hover:text-orange-500 transition-colors">
